@@ -6,18 +6,16 @@
 
 <title>Bruno Viana | Certification Portfolio</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:;500;600;700&display=swap
+<link href="https://fonts.googleapis.com/css2?family300;400;500;600;700&display=swap
 
 <style>
 
 :root{
-    --primary:#0078D4;
-    --secondary:#106ebe;
-    --bg:#f5f7fa;
+    --primary:#0078d4;
+    --dark:#1f2937;
+    --bg:#f3f6fa;
     --card:#ffffff;
-    --text:#1f2937;
-    --muted:#6b7280;
-    --border:#e5e7eb;
+    --text:#111827;
 }
 
 *{
@@ -30,12 +28,12 @@ body{
     font-family:'Inter',sans-serif;
     background:var(--bg);
     color:var(--text);
-    padding:40px;
 }
 
 .container{
     max-width:1400px;
     margin:auto;
+    padding:40px;
 }
 
 .hero{
@@ -49,33 +47,33 @@ body{
 }
 
 .hero h1{
-    font-size:53px;
+    font-size:56px;
     margin-bottom:15px;
 }
 
 .hero p{
-    color:var(--muted);
     font-size:18px;
+    color:#666;
 }
 
 .stats{
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
     gap:20px;
     margin-bottom:50px;
 }
 
 .stat{
     background:white;
-    border-radius:18px;
+    border-radius:16px;
     padding:25px;
-    box-shadow:0 6px 20px rgba(0,0,0,.06);
+    box-shadow:0 4px 14px rgba(0,0,0,.08);
 }
 
 .stat-number{
+    color:var(--primary);
     font-size:42px;
     font-weight:700;
-    color:var(--primary);
 }
 
 .section{
@@ -89,32 +87,28 @@ body{
 .highlight{
     background:white;
     padding:30px;
-    border-radius:20px;
     border-left:8px solid var(--primary);
-    box-shadow:0 6px 20px rgba(0,0,0,.05);
-}
-
-.highlight h3{
-    margin-bottom:10px;
+    border-radius:16px;
+    box-shadow:0 4px 14px rgba(0,0,0,.08);
 }
 
 .grid{
     display:grid;
-    grid-template-columns:repeat(auto-fill,minmax(260px,1fr));
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
     gap:20px;
 }
 
 .card{
     background:white;
-    border-radius:20px;
+    border-radius:18px;
     padding:20px;
     text-align:center;
-    transition:.3s;
-    box-shadow:0 6px 20px rgba(0,0,0,.05);
+    box-shadow:0 4px 14px rgba(0,0,0,.08);
+    transition:.25s;
 }
 
 .card:hover{
-    transform:translateY(-6px);
+    transform:translateY(-5px);
 }
 
 .card img{
@@ -124,47 +118,46 @@ body{
     margin-bottom:15px;
 }
 
-.card h3{
-    margin-bottom:8px;
-}
-
 .vendor{
     color:var(--primary);
     font-size:12px;
     font-weight:700;
-    text-transform:uppercase;
     letter-spacing:1px;
+    text-transform:uppercase;
+}
+
+.card h3{
+    margin-top:10px;
+    margin-bottom:8px;
 }
 
 .date{
-    color:var(--muted);
-    margin-top:6px;
+    color:#777;
+    margin-top:8px;
 }
 
 .timeline{
     background:white;
-    border-radius:20px;
+    border-radius:16px;
     padding:30px;
-    box-shadow:0 6px 20px rgba(0,0,0,.05);
+    box-shadow:0 4px 14px rgba(0,0,0,.08);
 }
 
-.timeline-row{
-    position:relative;
+.timeline-item{
     border-left:4px solid var(--primary);
-    padding-left:20px;
+    padding-left:15px;
     margin-bottom:25px;
 }
 
 .year{
     color:var(--primary);
     font-weight:700;
-    font-size:18px;
 }
 
 .footer{
-    margin-top:60px;
     text-align:center;
-    color:var(--muted);
+    margin-top:60px;
+    color:#888;
 }
 
 </style>
@@ -176,7 +169,9 @@ body{
 
 <div class="hero">
 <div class="hero-year">2017 → 2026</div>
+
 <h1>17+ Certifications. Still Going.</h1>
+
 <p>
 Bruno Viana | Senior System Administrator
 </p>
@@ -211,14 +206,11 @@ Bruno Viana | Senior System Administrator
 <h2>🏆 Latest Achievement</h2>
 
 <div class="highlight">
-
 <h3>Microsoft 365 Administrator Expert (MS-102)</h3>
-
 <p>
-Expert certification covering identity, endpoint management,
-Microsoft 365 administration and collaboration services.
+Expert certification validating enterprise Microsoft 365 administration,
+identity management, endpoint management and collaboration services.
 </p>
-
 </div>
 
 </div>
@@ -230,7 +222,7 @@ Microsoft 365 administration and collaboration services.
 <div class="grid">
 
 <div class="card">
-badges/AZ900.png
+badges/AZ900.png alt="AZ900">
 <div class="vendor">Microsoft</div>
 <h3>AZ-900</h3>
 <p>Azure Fundamentals</p>
@@ -238,7 +230,7 @@ badges/AZ900.png
 </div>
 
 <div class="card">
-badges/MSsecurity fundamentals.png">
+badges/SC900.png alt="SC900">
 <div class="vendor">Microsoft</div>
 <h3>SC-900</h3>
 <p>Security Fundamentals</p>
@@ -246,29 +238,29 @@ badges/MSsecurity fundamentals.png">
 </div>
 
 <div class="card">
-<img src="badgeslass="vendor">Microsoft</div>
+badges/MS900.pngMS900">
+<div class="vendor">Microsoft</div>
 <h3>MS-900</h3>
 <p>Microsoft 365 Fundamentals</p>
 <div class="date">2023</div>
 </div>
 
 <div class="card">
-<img src="badges/MD-100.pngs="vendor">Microsoft</div>
+<img src="badges/MD100.png<div class="vendor">Microsoft</div>
 <h3>MD-100</h3>
 <p>Windows Client</p>
 <div class="date">2019</div>
 </div>
 
 <div class="card">
-<imges/MD-101.png
-<div class="vendor">Microsoft</div>
+<img src="badges/MD101.png"  class="vendor">Microsoft</div>
 <h3>MD-101</h3>
 <p>Managing Modern Desktops</p>
 <div class="date">2020</div>
 </div>
 
 <div class="card">
-ges/MS365-Moderndesktopadministrator.png">
+<img src="badges/MDA.png" op">
 <div class="vendor">Microsoft</div>
 <h3>Modern Desktop Admin</h3>
 <p>Associate</p>
@@ -281,18 +273,18 @@ ges/MS365-Moderndesktopadministrator.png">
 
 <div class="section">
 
-<h2>🛡️ Fortinet & ISC2</h2>
+<h2>🛡️ Security Certifications</h2>
 
 <div class="grid">
 
 <div class="card">
-<adges/NSE1.png
+badges/NSE1.png
 <div class="vendor">Fortinet</div>
 <h3>NSE 1</h3>
 </div>
 
 <div class="card">
-.png">
+<img srcSE2.png
 <div class="vendor">Fortinet</div>
 <h3>NSE 2</h3>
 </div>
@@ -304,13 +296,13 @@ badges/NSE3.png
 </div>
 
 <div class="card">
-3 Operator.png">
+badges/NSE3-Operator.png" alt="Operator">
 <div class="vendor">Fortinet</div>
 <h3>Operator</h3>
 </div>
 
 <div class="card">
-badges/ISC2.png
+<imges/ISC2.png
 <div class="vendor">ISC2</div>
 <h3>ISC2 Candidate</h3>
 </div>
@@ -321,48 +313,43 @@ badges/ISC2.png
 
 <div class="section">
 
-<h2>📅 Certification Timeline</h2>
+<h2>📅 Timeline</h2>
 
 <div class="timeline">
 
-<div class="timeline-row">
+<div class="timeline-item">
 <div class="year">2017</div>
 Microsoft Certified Professional
 </div>
 
-<div class="timeline-row">
+<div class="timeline-item">
 <div class="year">2019</div>
 MD-100 Windows Client
 </div>
 
-<div class="timeline-row">
+<div class="timeline-item">
 <div class="year">2020</div>
 MD-101 + Modern Desktop Administrator
 </div>
 
-<div class="timeline-row">
+<div class="timeline-item">
 <div class="year">2021</div>
-AZ-900
+AZ-900 Azure Fundamentals
 </div>
 
-<div class="timeline-row">
+<div class="timeline-item">
 <div class="year">2023</div>
 SC-900 + MS-900
 </div>
 
-<div class="timeline-row">
-<div class="year">2024</div>
-AZ-104 + AI-900
-</div>
-
-<div class="timeline-row">
+<div class="timeline-item">
 <div class="year">2025</div>
-MD-102 + MS-102 Expert
+Microsoft 365 Administrator Expert
 </div>
 
-<div class="timeline-row">
+<div class="timeline-item">
 <div class="year">2026</div>
-Fortinet Track + AI Skills Fest
+Fortinet Security Track
 </div>
 
 </div>
@@ -370,7 +357,7 @@ Fortinet Track + AI Skills Fest
 </div>
 
 <div class="footer">
-Built by Bruno Viana • Certifications Portfolio
+Built by Bruno Viana • Certification Portfolio
 </div>
 
 </div>
