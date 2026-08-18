@@ -3,296 +3,580 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Bruno Viana Certifications</title>
+<title>Bruno Viana - Certifications Portfolio</title>
 <style>
-*{  margin:0;
-    padding:0;
-    box-sizing:border-box;}
-body{
-    font-family:Segoe UI,Arial,sans-serif;
-    background:#f3f4f6;
-    color:#111827;
-    padding:30px;}
-.container{
-    max-width:1400px;
-    margin:auto;}
-.header{
-    margin-bottom:30px;
+:root {
+    --bg-color: #f7f6f8;
+    --card-bg: #ffffff;
+    --primary-color: #9d174d;
+    --primary-light: #fbcfe8;
+    --text-primary: #1f2937;
+    --text-secondary: #6b7280;
+    --badge-gray: #e5e7eb;
+    --border-color: #e5e7eb;
 }
-.year{
-    color:#2563eb;
-    font-size:12px;
-    font-weight:bold;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
-.header h1{
-    font-size:48px;
-    margin-top:6px;
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-primary);
+    padding: 40px 20px;
 }
-.subtitle{
-    color:#6b7280;
-    margin-top:5px;
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
 }
-.stats{
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
-    gap:15px;
-    margin:30px 0;
+
+/* Header */
+.header-tag {
+    display: inline-block;
+    background-color: var(--primary-light);
+    color: var(--primary-color);
+    font-size: 11px;
+    font-weight: 700;
+    padding: 4px 10px;
+    border-radius: 12px;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
 }
-.stat{
-    background:white;
-    padding:20px;
-    border-radius:12px;
+
+.header h1 {
+    font-size: 38px;
+    font-weight: 800;
+    color: #111827;
+    margin-bottom: 8px;
 }
-.stat-number{
-    color:#2563eb;
-    font-size:28px;
-    font-weight:bold;
+
+.header p {
+    color: var(--text-secondary);
+    font-size: 15px;
+    margin-bottom: 8px;
 }
-.section{
-    margin-top:35px;
+
+.author {
+    font-size: 14px;
+    color: var(--text-secondary);
+    margin-bottom: 25px;
 }
-.section h2{
-    margin-bottom:15px;
+
+.author strong {
+    color: var(--text-primary);
 }
-.highlight{
-    background:white;
-    padding:20px;
-    border-radius:12px;
-    border-left:5px solid #2563eb;
+
+/* Stats Row */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    margin-bottom: 35px;
 }
-.grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fill,minmax(220px,1fr));
-    gap:15px;
+
+.stat-card {
+    background: var(--card-bg);
+    padding: 16px 20px;
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
 }
-.card{
-    background:white;
-    border-radius:12px;
-    padding:15px;
-    text-align:center;
+
+.stat-number {
+    font-size: 26px;
+    font-weight: 800;
+    color: #111827;
 }
-.card img{
-    width:90px;
-    height:90px;
-    object-fit:contain;
-    display:block;
-    margin:0 auto 10px auto;
+
+.stat-label {
+    font-size: 10px;
+    color: var(--text-secondary);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-top: 4px;
 }
-.vendor{
-    color:#2563eb;
-    font-size:11px;
-    font-weight:bold;
-    margin-bottom:5px;
+
+/* Section Header */
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    margin-top: 35px;
 }
-.card h3{
-    margin-bottom:5px;
+
+.section-title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
-.card p{
-    font-size:13px;
-    color:#666;
+
+.section-number {
+    background: var(--primary-color);
+    color: white;
+    width: 22px;
+    height: 22px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: bold;
 }
-.timeline{
-    background:white;
-    border-radius:12px;
-    padding:20px;
+
+.section-title h2 {
+    font-size: 18px;
+    font-weight: 700;
 }
-.timeline-item{
-    border-left:3px solid #2563eb;
-    padding-left:12px;
-    margin-bottom:12px;
+
+.section-subtitle {
+    font-size: 12px;
+    color: var(--text-secondary);
+    margin-left: 8px;
 }
-.footer{
-    text-align:center;
-    margin-top:40px;
-    color:#888;
+
+.badge-count {
+    font-size: 11px;
+    color: var(--text-secondary);
+    font-weight: 600;
+    letter-spacing: 0.5px;
 }
-@media(max-width:768px){
-    .stats{
-        grid-template-columns:repeat(2,1fr);
-    }
-    .header h1{
-        font-size:34px;
-    }
+
+/* Just Earned Banner */
+.just-earned-card {
+    background: var(--card-bg);
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+    display: grid;
+    grid-template-columns: 320px 1fr;
+    overflow: hidden;
+}
+
+.featured-badge {
+    padding: 30px;
+    border-right: 1px solid var(--border-color);
+    text-align: center;
+    position: relative;
+}
+
+.tag-new {
+    position: absolute;
+    top: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--primary-color);
+    color: white;
+    font-size: 9px;
+    font-weight: 700;
+    padding: 2px 8px;
+    border-radius: 8px;
+}
+
+.featured-badge img {
+    width: 110px;
+    height: 110px;
+    object-fit: contain;
+    margin: 15px auto;
+    display: block;
+}
+
+.featured-badge h3 {
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 4px;
+}
+
+.featured-badge p {
+    font-size: 11px;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+}
+
+.featured-details {
+    padding: 35px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.featured-details .tag-date {
+    font-size: 10px;
+    font-weight: 700;
+    color: var(--primary-color);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 8px;
+}
+
+.featured-details h2 {
+    font-size: 22px;
+    font-weight: 800;
+    margin-bottom: 12px;
+}
+
+.featured-details p {
+    font-size: 14px;
+    color: var(--text-secondary);
+    line-height: 1.5;
+}
+
+/* Grid layout for cards */
+.grid-cards {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 12px;
+}
+
+.card {
+    background: var(--card-bg);
+    border-radius: 10px;
+    border: 1px solid var(--border-color);
+    padding: 15px 10px;
+    text-align: center;
+    position: relative;
+}
+
+.card-num {
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    border: 1px solid var(--border-color);
+    font-size: 9px;
+    color: var(--text-secondary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card img {
+    width: 65px;
+    height: 65px;
+    object-fit: contain;
+    margin: 10px auto;
+    display: block;
+}
+
+.card h4 {
+    font-size: 11px;
+    font-weight: 700;
+    margin-bottom: 4px;
+    line-height: 1.3;
+}
+
+.card .category {
+    font-size: 9px;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+/* Next Up Section */
+.next-up-container {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    gap: 15px;
+}
+
+.next-up-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+}
+
+.status-tag {
+    background: #fef3c7;
+    color: #d97706;
+    font-size: 8px;
+    font-weight: 800;
+    padding: 2px 6px;
+    border-radius: 4px;
+    display: inline-block;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+}
+
+.card p.status-desc {
+    font-size: 9px;
+    color: var(--text-secondary);
+    margin-top: 4px;
+}
+
+.next-up-info {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.next-up-info .timeframe {
+    font-size: 10px;
+    font-weight: 700;
+    color: var(--primary-color);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 6px;
+}
+
+.next-up-info h3 {
+    font-size: 18px;
+    font-weight: 800;
+    margin-bottom: 10px;
+}
+
+.next-up-info p {
+    font-size: 12px;
+    color: var(--text-secondary);
+    line-height: 1.5;
+}
+
+/* Footer */
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border-color);
+    font-size: 12px;
+    color: var(--text-secondary);
+}
+
+.tags {
+    display: flex;
+    gap: 10px;
+}
+
+@media(max-width: 1024px) {
+    .grid-cards { grid-template-columns: repeat(3, 1fr); }
+    .just-earned-card { grid-template-columns: 1fr; }
+    .next-up-container { grid-template-columns: 1fr; }
+}
+
+@media(max-width: 640px) {
+    .stats-grid { grid-template-columns: repeat(2, 1fr); }
+    .grid-cards { grid-template-columns: repeat(2, 1fr); }
+    .next-up-grid { grid-template-columns: 1fr; }
 }
 </style>
 </head>
 <body>
+
 <div class="container">
-<div class="header">
-<div class="year">2017 → 2026</div>
-<h1>17+ Certifications. Still Going.</h1>
-<div class="subtitle">
-Bruno Viana | Senior System Administrator
-</div>
-</div>
-<div class="stats">
-<div class="stat">
-<div class="stat-number">17+</div>
-Credentials
-</div>
-<div class="stat">
-<div class="stat-number">3</div>
-Vendors
-</div>
-<div class="stat">
-<div class="stat-number">1</div>
-Expert
-</div>
-<div class="stat">
-<div class="stat-number">9</div>
-Years Journey
-</div>
-</div>
-<div class="section">
-<h2>🏆 Latest Achievement</h2>
-<div class="highlight">
-badges/ms102.png
-<h3>Microsoft 365 Administrator Expert (MS-102)</h3>
-<p>Earned April 2025</p>
-</div>
-</div>
-<div class="section">
-<h2>☁️ Microsoft Certifications</h2>
-<div class="grid">
-<div class="card">
-Z900.png" alt="AZ900">
-<div class="vendor">MICROSOFT</div>
-<h3>AZ-900</h3>
-<p>Azure Fundamentals</p>
-</div>
-<div class="card">
-badges/SC900.png
-<div class="vendor">MICROSOFT</div>
-<h3>SC-900</h3>
-<p>Security Fundamentals</p>
-</div>
-<div class="card">
-.png" alt="MS900">
-<div class="vendor">MICROSOFT</div>
-<h3>MS-900</h3>
-<p>Microsoft 365 Fundamentals</p>
-</div>
-<div class="card">
-badges/ai900.png
-<div class="vendor">MICROSOFT</div>
-<h3>AI-900</h3>
-<p>Azure AI Fundamentals</p>
-</div>
-<div class="card">
-az104.png" alt="AZ104">
-<div class="vendor">MICROSOFT</div>
-<h3>AZ-104</h3>
-<p>Azure Administrator Associate</p>
-</div>
-<div class="card">
-" alt="MD102">
-<div class="vendor">MICROSOFT</div>
-<h3>MD-102</h3>
-<p>Endpoint Administrator</p>
-</div>
-<div class="card">
-badges/ms102.png
-<div class="vendor">MICROSOFT</div>
-<h3>MS-102</h3>
-<p>Administrator Expert</p>
-</div>
 
-<div class="card">
-badges/MD100.png="MD100">
-<div class="vendor">MICROSOFT</div>
-<h3>MD-100</h3>
-<p>Windows Client</p>
-</div>
+    <div class="header-tag">2017 — 2026</div>
+    <div class="header">
+        <h1>17+ Certifications. Still Going.</h1>
+        <p>From infrastructure foundations to multi-cloud security and AI integration.</p>
+        <div class="author"><strong>Bruno Viana</strong> • Senior System Administrator</div>
+    </div>
 
-<div class="card">
-ges/MD101.png" alt="MD101">
-<div class="vendor">MICROSOFT</div>
-<h3>MD-101</h3>
-<p>Managing Modern Desktops</p>
-</div>
+    <!-- Stats -->
+    <div class="stats-grid">
+        <div class="stat-card">
+            <div class="stat-number">17</div>
+            <div class="stat-label">Certifications Earned</div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-number">3</div>
+            <div class="stat-label">Vendors</div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-number">9</div>
+            <div class="stat-label">Years Journey</div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-number">4</div>
+            <div class="stat-label">In Flight</div>
+        </div>
+    </div>
 
-<div class="card">
-badges/MDA.png="MDA">
-<div class="vendor">MICROSOFT</div>
-<h3>Modern Desktop Administrator</h3>
-<p>Associate</p>
-</div>
+    <!-- Section 1: Just Earned -->
+    <div class="section-header">
+        <div class="section-title">
+            <span class="section-number">1</span>
+            <h2>Just Earned</h2>
+            <span class="section-subtitle">hot off the press</span>
+        </div>
+        <span class="badge-count">1 BADGE</span>
+    </div>
 
-</div>
+    <div class="just-earned-card">
+        <div class="featured-badge">
+            <span class="tag-new">NEW</span>
+            <img src="badges/ms102.png" alt="MS-102">
+            <h3>Microsoft Certified: Administrator Expert</h3>
+            <p>Modern Work</p>
+        </div>
+        <div class="featured-details">
+            <div class="tag-date">Newest Badge — April 2025</div>
+            <h2>MS-102 — Microsoft 365 Administrator Expert</h2>
+            <p>Validates expert-level skills in evaluating, planning, migrating, deploying, and managing Microsoft 365 services across enterprise environments.</p>
+        </div>
+    </div>
 
-</div>
+    <!-- Section 2: Earned -->
+    <div class="section-header">
+        <div class="section-title">
+            <span class="section-number">2</span>
+            <h2>Earned</h2>
+            <span class="section-subtitle">2017 — Present</span>
+        </div>
+        <span class="badge-count">16 BADGES</span>
+    </div>
 
-<div class="section">
+    <div class="grid-cards">
 
-<h2>🛡️ Security / Fortinet / ISC2</h2>
+        <div class="card">
+            <span class="card-num">1</span>
+            <img src="badges/AZ900.png" alt="AZ-900">
+            <h4>Microsoft Certified: Azure Fundamentals</h4>
+            <span class="category">Cloud</span>
+        </div>
 
-<div class="grid">
+        <div class="card">
+            <span class="card-num">2</span>
+            <img src="badges/SC900.png" alt="SC-900">
+            <h4>Microsoft Certified: Security Fundamentals</h4>
+            <span class="category">Security</span>
+        </div>
 
-<div class="card">
-badges/ISC2.png alt="ISC2">
-<h3>ISC2 Candidate</h3>
-</div>
+        <div class="card">
+            <span class="card-num">3</span>
+            <img src="badges/MS900.png" alt="MS-900">
+            <h4>Microsoft Certified: M365 Fundamentals</h4>
+            <span class="category">Modern Work</span>
+        </div>
 
-<div class="card">
-1.png" alt="NSE1">
-<h3>NSE1</h3>
-</div>
+        <div class="card">
+            <span class="card-num">4</span>
+            <img src="badges/ai900.png" alt="AI-900">
+            <h4>Microsoft Certified: Azure AI Fundamentals</h4>
+            <span class="category">AI Strategy</span>
+        </div>
 
-<div class="card">
-ges/NSE2.png" alt="NSE2">
-<h3>NSE2</h3>
-</div>
+        <div class="card">
+            <span class="card-num">5</span>
+            <img src="badges/az104.png" alt="AZ-104">
+            <h4>Microsoft Certified: Azure Administrator</h4>
+            <span class="category">Cloud</span>
+        </div>
 
-<div class="card">
-badges/NSE3.png
-<h3>NSE3</h3>
-</div>
+        <div class="card">
+            <span class="card-num">6</span>
+            <img src="badges/md102.png" alt="MD-102">
+            <h4>Microsoft Certified: Endpoint Administrator</h4>
+            <span class="category">Modern Work</span>
+        </div>
 
-<div class="card">
-badges/NSE3-Operator.png="Operator">
-<h3>Operator</h3>
-</div>
+        <div class="card">
+            <span class="card-num">7</span>
+            <img src="badges/MD100.png" alt="MD-100">
+            <h4>Windows Client (MD-100)</h4>
+            <span class="category">Modern Work</span>
+        </div>
 
-</div>
+        <div class="card">
+            <span class="card-num">8</span>
+            <img src="badges/MD101.png" alt="MD-101">
+            <h4>Managing Modern Desktops (MD-101)</h4>
+            <span class="category">Modern Work</span>
+        </div>
 
-</div>
+        <div class="card">
+            <span class="card-num">9</span>
+            <img src="badges/MDA.png" alt="MDA">
+            <h4>Modern Desktop Administrator Associate</h4>
+            <span class="category">Modern Work</span>
+        </div>
 
-<div class="section">
+        <div class="card">
+            <span class="card-num">10</span>
+            <img src="badges/ISC2.png" alt="ISC2">
+            <h4>Certified in Cybersecurity (CC)</h4>
+            <span class="category">Cybersecurity</span>
+        </div>
 
-<h2>📅 Certification Timeline</h2>
+        <div class="card">
+            <span class="card-num">11</span>
+            <img src="badges/NSE1.png" alt="NSE1">
+            <h4>Fortinet Certified Associate (NSE1)</h4>
+            <span class="category">Security</span>
+        </div>
 
-<div class="timeline">
+        <div class="card">
+            <span class="card-num">12</span>
+            <img src="badges/NSE2.png" alt="NSE2">
+            <h4>Fortinet Certified Associate (NSE2)</h4>
+            <span class="category">Security</span>
+        </div>
 
-<div class="timeline-item"><strong>2017</strong> • MCP</div>
-<div class="timeline-item"><strong>2020</strong> • Modern Desktop Administrator</div>
-<div class="timeline-item"><strong>2021</strong> • AZ-900</div>
-<div class="timeline-item"><strong>2023</strong> • SC-900 + MS-900</div>
-<div class="timeline-item"><strong>2024</strong> • AZ-104 + AI-900</div>
-<div class="timeline-item"><strong>2025</strong> • MD-102 + MS-102</div>
-<div class="timeline-item"><strong>2026</strong> • Fortinet Certifications</div>
+        <div class="card">
+            <span class="card-num">13</span>
+            <img src="badges/NSE3.png" alt="NSE3">
+            <h4>Fortinet Certified Associate (NSE3)</h4>
+            <span class="category">Security</span>
+        </div>
 
-</div>
+        <div class="card">
+            <span class="card-num">14</span>
+            <img src="badges/NSE3-Operator.png" alt="NSE3 Operator">
+            <h4>Fortinet Network Security Operator</h4>
+            <span class="category">Security</span>
+        </div>
 
-</div>
+    </div>
 
-<div class="section">
+    <!-- Section 3: Next Up -->
+    <div class="section-header">
+        <div class="section-title">
+            <span class="section-number">3</span>
+            <h2>Next Up</h2>
+            <span class="section-subtitle">Target: Next 3-6 months</span>
+        </div>
+        <span class="badge-count">4 BADGES</span>
+    </div>
 
-<h2>🚀 Next Up</h2>
+    <div class="next-up-container">
+        <div class="next-up-grid">
+            <div class="card">
+                <span class="status-tag">In Progress</span>
+                <h4>SC-300</h4>
+                <p class="status-desc">Identity & Access Administrator</p>
+            </div>
+            <div class="card">
+                <span class="status-tag">In Progress</span>
+                <h4>AI-102</h4>
+                <p class="status-desc">Designing Azure AI Solution</p>
+            </div>
+            <div class="card">
+                <span class="status-tag">In Progress</span>
+                <h4>AZ-305</h4>
+                <p class="status-desc">Azure Infrastructure Solutions</p>
+            </div>
+        </div>
 
-<div class="grid">
+        <div class="next-up-info">
+            <div class="timeframe">Target Goal</div>
+            <h3>From Administration to Security & Architecture</h3>
+            <p>Expanding domain authority into identity governance, specialized security design, and enterprise-grade multi-cloud solution architecture.</p>
+        </div>
+    </div>
 
-<div class="card"><h3>SC-300</h3></div>
-<div class="card"><h3>AI-102</h3></div>
-<div class="card"><h3>AZ-305</h3></div>
-<div class="card"><h3>SC-100</h3></div>
-
-</div>
-
-</div>
-
-<div class="footer">
-Built with ❤️ by Bruno Viana
-</div>
+    <div class="footer">
+        <div>Certification is not the goal. Staying useful to businesses is.</div>
+        <div class="tags">#MicrosoftCertified #Fortinet #ISC2 #Cloud #Cybersecurity</div>
+    </div>
 
 </div>
 
